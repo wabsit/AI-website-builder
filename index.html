@@ -7,9 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to AI Website Builder</h1>
-  <p>My first AI website is live on GitHub.</p>
 
-  <script src="script.js"></script>
+<header>
+  <h1>🚀 AI Website Builder</h1>
+  <p>Create Modern Websites with AI Prompts</p>
+</header>
+
+<main class="container">
+  <textarea id="prompt" placeholder="Describe your website...
+Example: Create a modern portfolio website"></textarea>
+
+  <button id="generateBtn">
+    Generate Website
+  </button>
+
+  <div class="preview">
+    <h2>Preview</h2>
+    <iframe id="previewFrame"></iframe>
+  </div>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
