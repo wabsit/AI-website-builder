@@ -1,32 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Website Builder</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Builder</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>🚀 AI Website Builder</h1>
-  <p>Create Modern Websites with AI Prompts</p>
+<header class="navbar">
+    <div class="logo">🚀 AI Builder</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Templates</a>
+        <a href="#">Pricing</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <button class="login-btn">Login</button>
 </header>
 
-<main class="container">
-  <textarea id="prompt" placeholder="Describe your website...
-Example: Create a modern portfolio website"></textarea>
+<section class="hero">
 
-  <button id="generateBtn">
-    Generate Website
-  </button>
+    <h1>Build Anything with AI</h1>
 
-  <div class="preview">
-    <h2>Preview</h2>
-    <iframe id="previewFrame"></iframe>
-  </div>
-</main>
+    <h2>From Prompt to Product</h2>
+
+    <p>
+        Create stunning websites, dashboards, SaaS apps, portfolios,
+        e-commerce stores and web applications by simply chatting with AI.
+    </p>
+
+    <div class="buttons">
+        <button id="startBtn" class="btn">
+            Start Building Free
+        </button>
+
+        <button id="demoBtn" class="btn btn-outline">
+            View Demo
+        </button>
+    </div>
+
+</section>
+
+<section class="features">
+
+    <div class="card">
+        <h3>🤖 AI Code Generator</h3>
+        <p>Create HTML, CSS, JavaScript, React and Next.js projects instantly.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Live Preview</h3>
+        <p>See your website update in real time while AI generates code.</p>
+    </div>
+
+    <div class="card">
+        <h3>💻 Smart Code Editor</h3>
+        <p>Edit generated code with a VS Code style experience.</p>
+    </div>
+
+    <div class="card">
+        <h3>📁 File Explorer</h3>
+        <p>Manage files and folders like Replit and CodeSandbox.</p>
+    </div>
+
+    <div class="card">
+        <h3>🚀 One Click Deploy</h3>
+        <p>Deploy your website directly to Vercel with one click.</p>
+    </div>
+
+    <div class="card">
+        <h3>☁ GitHub Integration</h3>
+        <p>Import, export and sync your projects with GitHub.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 AI Website Builder. All Rights Reserved.</p>
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
