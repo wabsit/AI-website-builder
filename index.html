@@ -1,100 +1,55 @@
-<!-- AI Builder Workspace -->
+<!-- Dashboard Section -->
 
-<section class="workspace">
+<section class="dashboard">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
+  <div class="dashboard-header">
+    <h2>📊 Dashboard</h2>
 
-        <h2>Projects</h2>
+    <div class="dashboard-actions">
+      <button class="btn">📂 Open Project</button>
+      <button class="btn">💾 Save</button>
+      <button class="btn primary">🚀 Deploy</button>
+    </div>
+  </div>
 
-        <button class="new-project">
-            + New Project
-        </button>
+  <div class="stats-grid">
 
-        <ul class="project-list">
-            <li>🌐 My Website</li>
-            <li>🛒 Ecommerce App</li>
-            <li>📊 Dashboard</li>
-            <li>📱 Portfolio</li>
-        </ul>
+    <div class="stat-card">
+      <h3>Projects</h3>
+      <h1>12</h1>
+      <p>Total Projects</p>
+    </div>
 
-    </aside>
+    <div class="stat-card">
+      <h3>Deployments</h3>
+      <h1>28</h1>
+      <p>Successful Deploys</p>
+    </div>
 
-    <!-- Main Content -->
-    <main class="main-panel">
+    <div class="stat-card">
+      <h3>AI Requests</h3>
+      <h1>154</h1>
+      <p>Generated with AI</p>
+    </div>
 
-        <!-- AI Chat -->
-        <section class="chat-panel">
+    <div class="stat-card">
+      <h3>Storage</h3>
+      <h1>2.4 GB</h1>
+      <p>Cloud Usage</p>
+    </div>
 
-            <h2>🤖 AI Assistant</h2>
+  </div>
 
-            <div class="chat-box">
+  <div class="deploy-section">
 
-                <div class="ai-message">
-                    👋 Hello! Describe the website you want to build.
-                </div>
+    <h2>🚀 One-Click Deployment</h2>
 
-            </div>
+    <p>Deploy your project directly to Vercel or GitHub.</p>
 
-            <textarea
-                id="promptInput"
-                placeholder="Example: Build a modern e-commerce website with login, payment and admin panel..."
-            ></textarea>
+    <button class="btn primary">Deploy to Vercel</button>
+    <button class="btn">Push to GitHub</button>
 
-            <button id="generateBtn">
-                🚀 Generate Website
-            </button>
-
-        </section>
-
-        <!-- File Explorer -->
-        <section class="files-panel">
-
-            <h2>📁 Files</h2>
-
-            <ul>
-
-                <li>📄 index.html</li>
-
-                <li>🎨 style.css</li>
-
-                <li>⚙ script.js</li>
-
-                <li>📁 assets</li>
-
-                <li>📁 images</li>
-
-            </ul>
-
-        </section>
-
-        <!-- Live Preview -->
-        <section class="preview-panel">
-
-            <h2>⚡ Live Preview</h2>
-
-            <iframe
-                id="previewFrame"
-                title="Preview"
-            ></iframe>
-
-        </section>
-
-    </main>
+  </div>
 
 </section>
-
-<footer>
-
-    <h3>AI Builder Platform</h3>
-
-    <p>
-        Powered by AI • React • Next.js • Node.js • Groq API
-    </p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>    
+        
