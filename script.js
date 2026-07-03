@@ -1,28 +1,3 @@
-// script.js
-
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startBtn");
-  const demoBtn = document.getElementById("demoBtn");
-
-  if (startBtn) {
-    startBtn.addEventListener("click", () => {
-      alert("🚀 Welcome to AI Website Builder!\nLet's start building your project.");
-    });
-  }
-
-  if (demoBtn) {
-    demoBtn.addEventListener("click", () => {
-      const demo = document.getElementById("demo");
-      if (demo) {
-        demo.scrollIntoView({
-          behavior: "smooth"
-        });
-      } else {
-        alert("Demo section coming soon!");
-      }
-    });
-  });
-});
 // ===============================
 // AI Builder - script.js Part 1
 // ===============================
@@ -106,50 +81,4 @@ if (generateBtn) {
 
     };
 
-              }
-// ===============================
-// AI Builder - script.js Part 2
-// ===============================
-
-// Save Project
-function saveProject() {
-
-    const prompt = document.getElementById("promptInput").value;
-
-    localStorage.setItem("aiPrompt", prompt);
-
-    alert("✅ Project Saved");
-
 }
-
-// Load Project
-
-window.onload = () => {
-
-    const saved = localStorage.getItem("aiPrompt");
-
-    if(saved){
-
-        document.getElementById("promptInput").value = saved;
-
-    }
-
-}
-
-// Deploy Button
-
-const deployButtons = document.querySelectorAll(".primary");
-
-deployButtons.forEach(btn=>{
-
-    btn.addEventListener("click",()=>{
-
-        alert("🚀 Deploy feature will be connected to Vercel later.");
-
-    });
-
-});
-
-// File Explorer
-
-const files
