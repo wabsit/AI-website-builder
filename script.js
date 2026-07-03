@@ -1,84 +1,80 @@
 // ===============================
-// AI Builder - script.js Part 1
+// AI Builder - script.js Part 2
 // ===============================
 
-// Buttons
-const startBtn = document.getElementById("startBtn");
-const demoBtn = document.getElementById("demoBtn");
-const generateBtn = document.getElementById("generateBtn");
+// Save Project
+function saveProject() {
 
-const promptInput = document.getElementById("promptInput");
-const chatBox = document.querySelector(".chat-box");
-const previewFrame = document.getElementById("previewFrame");
+    const prompt = document.getElementById("promptInput").value;
 
-// Start Button
-if (startBtn) {
-    startBtn.onclick = () => {
-        document.querySelector(".workspace").scrollIntoView({
-            behavior: "smooth"
-        });
-    };
-}
+    localStorage.setItem("aiPrompt", prompt);
 
-// Demo Button
-if (demoBtn) {
-    demoBtn.onclick = () => {
-        alert("🚀 AI Builder Demo Coming Soon!");
-    };
-}
-
-// Generate Button
-if (generateBtn) {
-
-    generateBtn.onclick = () => {
-
-        const prompt = promptInput.value.trim();
-
-        if (!prompt) {
-            alert("Please enter your prompt.");
-            return;
-        }
-
-        // User Message
-        chatBox.innerHTML += `
-            <div class="user-message">
-                ${prompt}
-            </div>
-        `;
-
-        // AI Loading
-        chatBox.innerHTML += `
-            <div class="ai-message">
-                🤖 Generating Website...
-            </div>
-        `;
-
-        chatBox.scrollTop = chatBox.scrollHeight;
-
-        // Fake Preview (बाद में Groq API से बदलेंगे)
-        setTimeout(() => {
-
-            previewFrame.srcdoc = `
-            <html>
-            <body style="
-                background:#111827;
-                color:white;
-                font-family:Arial;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                height:100vh;
-            ">
-            <div>
-            <h1>🚀 Website Generated</h1>
-            <p>${prompt}</p>
-            </div>
-            </body>
-            </html>
-            `;
-
-        },1500);
-
-    };
+    alert("✅ Project Saved");
 
 }
+
+// Load Project
+
+window.onload = () => {
+
+    const saved = localStorage.getItem("aiPrompt");
+
+    if(saved){
+
+        document.getElementById("promptInput").value = saved;
+
+    }
+
+}
+
+// Deploy Button
+
+const deployButtons = document.querySelectorAll(".primary");
+
+deployButtons.forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+        alert("🚀 Deploy feature will be connected to Vercel later.");
+
+    });
+
+});
+
+// File Explorer
+
+const files=document.querySelectorAll(".files-panel li");
+
+files.forEach(file=>{
+
+file.addEventListener("click",()=>{
+
+alert(file.innerText+" opened");
+
+});
+
+});
+
+// Dark Mode Toggle
+
+let dark=true;
+
+function toggleTheme(){
+
+if(dark){
+
+document.body.style.background="#ffffff";
+document.body.style.color="#111827";
+
+}else{
+
+document.body.style.background="#0f172a";
+document.body.style.color="#ffffff";
+
+}
+
+dark=!dark;
+
+}
+
+console.log("AI Builder Loaded Successfully");
