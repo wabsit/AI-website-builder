@@ -1,29 +1,25 @@
-document.getElementById("generateBtn").addEventListener("click", function () {
-  const prompt = document.getElementById("prompt").value;
-  const preview = document.getElementById("previewFrame");
+// script.js
 
-  const html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <style>
-        body{
-          font-family:Arial,sans-serif;
-          padding:40px;
-          text-align:center;
-          background:#f5f5f5;
-        }
-        h1{
-          color:#2563eb;
-        }
-      </style>
-    </head>
-    <body>
-      <h1>AI Generated Website</h1>
-      <p>${prompt}</p>
-    </body>
-    </html>
-  `;
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startBtn");
+  const demoBtn = document.getElementById("demoBtn");
 
-  preview.srcdoc = html;
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      alert("🚀 Welcome to AI Website Builder!\nLet's start building your project.");
+    });
+  }
+
+  if (demoBtn) {
+    demoBtn.addEventListener("click", () => {
+      const demo = document.getElementById("demo");
+      if (demo) {
+        demo.scrollIntoView({
+          behavior: "smooth"
+        });
+      } else {
+        alert("Demo section coming soon!");
+      }
+    });
+  });
 });
