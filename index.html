@@ -1,55 +1,32 @@
-<!-- Dashboard Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Website Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<section class="dashboard">
+<header>
+  <h1>🚀 AI Website Builder</h1>
+  <p>Create Modern Websites with AI Prompts</p>
+</header>
 
-  <div class="dashboard-header">
-    <h2>📊 Dashboard</h2>
+<main class="container">
+  <textarea id="prompt" placeholder="Describe your website...
+Example: Create a modern portfolio website"></textarea>
 
-    <div class="dashboard-actions">
-      <button class="btn">📂 Open Project</button>
-      <button class="btn">💾 Save</button>
-      <button class="btn primary">🚀 Deploy</button>
-    </div>
+  <button id="generateBtn">
+    Generate Website
+  </button>
+
+  <div class="preview">
+    <h2>Preview</h2>
+    <iframe id="previewFrame"></iframe>
   </div>
+</main>
 
-  <div class="stats-grid">
-
-    <div class="stat-card">
-      <h3>Projects</h3>
-      <h1>12</h1>
-      <p>Total Projects</p>
-    </div>
-
-    <div class="stat-card">
-      <h3>Deployments</h3>
-      <h1>28</h1>
-      <p>Successful Deploys</p>
-    </div>
-
-    <div class="stat-card">
-      <h3>AI Requests</h3>
-      <h1>154</h1>
-      <p>Generated with AI</p>
-    </div>
-
-    <div class="stat-card">
-      <h3>Storage</h3>
-      <h1>2.4 GB</h1>
-      <p>Cloud Usage</p>
-    </div>
-
-  </div>
-
-  <div class="deploy-section">
-
-    <h2>🚀 One-Click Deployment</h2>
-
-    <p>Deploy your project directly to Vercel or GitHub.</p>
-
-    <button class="btn primary">Deploy to Vercel</button>
-    <button class="btn">Push to GitHub</button>
-
-  </div>
-
-</section>
-        
+<script src="script.js"></script>
+</body>
+</html>
