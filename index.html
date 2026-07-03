@@ -1,182 +1,100 @@
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Builder - Build Anything with AI</title>
+<!-- AI Builder Workspace -->
 
-  <link rel="stylesheet" href="style.css">
+<section class="workspace">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Sidebar -->
+    <aside class="sidebar">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <h2>Projects</h2>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+        <button class="new-project">
+            + New Project
+        </button>
 
-<body>
+        <ul class="project-list">
+            <li>🌐 My Website</li>
+            <li>🛒 Ecommerce App</li>
+            <li>📊 Dashboard</li>
+            <li>📱 Portfolio</li>
+        </ul>
 
-<header class="navbar">
+    </aside>
 
-<div class="logo">
+    <!-- Main Content -->
+    <main class="main-panel">
 
-🤖 AI Builder
+        <!-- AI Chat -->
+        <section class="chat-panel">
 
-</div>
+            <h2>🤖 AI Assistant</h2>
 
-<nav>
+            <div class="chat-box">
 
-<a href="#">Home</a>
+                <div class="ai-message">
+                    👋 Hello! Describe the website you want to build.
+                </div>
 
-<a href="#">Features</a>
+            </div>
 
-<a href="#">Templates</a>
+            <textarea
+                id="promptInput"
+                placeholder="Example: Build a modern e-commerce website with login, payment and admin panel..."
+            ></textarea>
 
-<a href="#">Pricing</a>
+            <button id="generateBtn">
+                🚀 Generate Website
+            </button>
 
-<a href="#">Docs</a>
+        </section>
 
-<a href="#">Blog</a>
+        <!-- File Explorer -->
+        <section class="files-panel">
 
-<a href="#">Contact</a>
+            <h2>📁 Files</h2>
 
-</nav>
+            <ul>
 
-<div class="nav-buttons">
+                <li>📄 index.html</li>
 
-<button class="login">Login</button>
+                <li>🎨 style.css</li>
 
-<button class="signup">Sign Up</button>
+                <li>⚙ script.js</li>
 
-</div>
+                <li>📁 assets</li>
 
-</header>
+                <li>📁 images</li>
 
-<section class="hero">
+            </ul>
 
-<div class="hero-content">
+        </section>
 
-<h1>
+        <!-- Live Preview -->
+        <section class="preview-panel">
 
-Build Anything with AI
+            <h2>⚡ Live Preview</h2>
 
-</h1>
+            <iframe
+                id="previewFrame"
+                title="Preview"
+            ></iframe>
 
-<h2>
+        </section>
 
-From Prompt to Product
-
-</h2>
-
-<p>
-
-Create stunning websites, dashboards, SaaS apps,
-portfolios, e-commerce stores and full-stack web
-applications simply by chatting with AI.
-
-</p>
-
-<div class="hero-buttons">
-
-<button id="startBtn">
-
-🚀 Start Building Free
-
-</button>
-
-<button id="demoBtn">
-
-▶ View Demo
-
-</button>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<div class="preview-window">
-
-<div class="window-top">
-
-<span></span>
-
-<span></span>
-
-<span></span>
-
-</div>
-
-<div class="window-body">
-
-<h3>AI Preview</h3>
-
-<p>Generating your project...</p>
-
-</div>
-
-</div>
-
-</div>
+    </main>
 
 </section>
 
-<section class="features">
+<footer>
 
-<h2>Powerful Features</h2>
+    <h3>AI Builder Platform</h3>
 
-<div class="feature-grid">
+    <p>
+        Powered by AI • React • Next.js • Node.js • Groq API
+    </p>
 
-<div class="card">
+</footer>
 
-<h3>🤖 AI Code Generator</h3>
+<script src="script.js"></script>
 
-<p>Create production-ready code using AI.</p>
-
-</div>
-
-<div class="card">
-
-<h3>⚡ Live Preview</h3>
-
-<p>Preview every change instantly.</p>
-
-</div>
-
-<div class="card">
-
-<h3>📁 File Explorer</h3>
-
-<p>Manage files like VS Code.</p>
-
-</div>
-
-<div class="card">
-
-<h3>💻 Monaco Editor</h3>
-
-<p>Edit code with a professional editor.</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚀 Deploy</h3>
-
-<p>Deploy directly to Vercel.</p>
-
-</div>
-
-<div class="card">
-
-<h3>☁ GitHub</h3>
-
-<p>Import and export repositories.</p>
-
-</div>
-
-</div>
-
-</section>
+</body>
+</html>    
