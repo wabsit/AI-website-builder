@@ -1,141 +1,37 @@
- /* ===========================
-   AI Builder - style.css Part 2
-   Workspace + Sidebar + Chat
-=========================== */
-
-.workspace{
-display:grid;
-grid-template-columns:260px 1fr;
-min-height:100vh;
-background:#0b1120;
-}
-
-.sidebar{
-background:#111827;
-padding:25px;
-border-right:1px solid #1f2937;
-}
-
-.sidebar h2{
-font-size:24px;
-margin-bottom:20px;
-color:#60a5fa;
-}
-
-.new-project{
-width:100%;
-padding:14px;
-background:#2563eb;
-color:#fff;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-weight:600;
-margin-bottom:25px;
-}
-
-.new-project:hover{
-background:#1d4ed8;
-}
-
-.project-list{
-list-style:none;
-}
-
-.project-list li{
-padding:12px;
-margin-bottom:10px;
-background:#1e293b;
-border-radius:10px;
-cursor:pointer;
-transition:.3s;
-}
-
-.project-list li:hover{
-background:#334155;
-}
-
-.main-panel{
-padding:30px;
-display:grid;
-grid-template-columns:1fr 350px;
-gap:25px;
-}
-
-.chat-panel{
-background:#111827;
-padding:25px;
-border-radius:15px;
-}
-
-.chat-panel h2{
-margin-bottom:20px;
-}
-
-.chat-box{
-height:320px;
-overflow-y:auto;
-background:#1e293b;
-border-radius:12px;
-padding:20px;
-margin-bottom:20px;
-}
-
-.ai-message{
-background:#2563eb;
-padding:14px;
-border-radius:12px;
-display:inline-block;
-max-width:80%;
-}
-
-#promptInput{
-width:100%;
-height:120px;
-padding:15px;
-background:#0f172a;
-color:#fff;
-border:1px solid #334155;
-border-radius:10px;
-resize:none;
-margin-top:15px;
-}
-
-#generateBtn{
-margin-top:15px;
-padding:14px 28px;
-background:#2563eb;
-color:#fff;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-size:16px;
-font-weight:600;
-}
-
-#generateBtn:hover{
-background:#1d4ed8;
-}
-
-.files-panel,
-.preview-panel{
-background:#111827;
-padding:20px;
-border-radius:15px;
-}
-
-.files-panel h2,
-.preview-panel h2{
-margin-bottom:15px;
-color:#60a5fa;
-}
-
-.files-panel ul{
-list-style:none;
-}
-
-.files-panel li{
-padding:10px;
-margin-bottom:8px;
-background:#1e293b;
-border-radius:
+ AI-Website-Builder/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── assets/
+│   ├── logo.svg
+│   ├── hero.png
+│   └── icons/
+│
+├── pages/
+│   ├── dashboard.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── pricing.html
+│   └── docs.html
+│
+├── components/
+│   ├── navbar.js
+│   ├── sidebar.js
+│   ├── chat.js
+│   ├── preview.js
+│   └── editor.js
+│
+├── css/
+│   ├── dashboard.css
+│   ├── editor.css
+│   └── responsive.css
+│
+├── js/
+│   ├── ai.js
+│   ├── github.js
+│   ├── deploy.js
+│   └── auth.js
+│
+└── README.md
