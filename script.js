@@ -458,3 +458,115 @@ function deployProject() {
 }
 
 console.log("AI Builder Script Part 3 Loaded");
+// ====================================
+// AI Website Builder - Part 1
+// ====================================
+
+// Elements
+const startBtn = document.getElementById("startBtn");
+const demoBtn = document.getElementById("demoBtn");
+const generateBtn = document.getElementById("generateBtn");
+const promptInput = document.getElementById("promptInput");
+const chatBox = document.querySelector(".chat-box");
+const previewFrame = document.getElementById("previewFrame");
+const themeToggle = document.getElementById("themeToggle");
+
+// Start Button
+if (startBtn) {
+  startBtn.addEventListener("click", () => {
+    const workspace = document.querySelector(".workspace");
+    if (workspace) {
+      workspace.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
+}
+
+// Demo Button
+if (demoBtn) {
+  demoBtn.addEventListener("click", () => {
+    alert("Welcome to AI Website Builder Demo!");
+    // ====================================
+// AI Website Builder - Part 2
+// Theme Toggle + AI Chat
+// ====================================
+
+// Theme Toggle
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+    });
+}
+
+// Add AI Message
+function addAIMessage(message) {
+    if (!chatBox) return;
+
+    chatBox.innerHTML += `
+        <div class="ai-message">
+            🤖 ${message}
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Add User Message
+function addUserMessage(message) {
+    if (!chatBox) return;
+
+    chatBox.innerHTML += `
+        <div class="user-message">
+            👤 ${message}
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+  });
+}
+// ====================================
+// AI Website Builder - Part 3
+// Generate Website + API Call
+// ====================================
+
+async function generateWebsite() {
+
+    const prompt = promptInput.value.trim();
+
+    if (!prompt) {
+        alert("Please enter your website idea.");
+        return;
+    }
+
+    addUserMessage(prompt);
+    addAIMessage("Generating your website...");
+
+    try {
+
+        const response = await fetch("/api/generate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                prompt: prompt
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.choices && data.choices.length > 0) {
+
+            const html = data.choices[0].message.content;
+
+            if (previewFrame) {
+                previewFrame.srcdoc = html;
+            }
+
+            addAIMessage("✅ Website Generated Successfully!");
+
+        } else {
+
+            addAIMessage
