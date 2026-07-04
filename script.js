@@ -198,3 +198,133 @@ alert(file.innerText);
 });
 
 console.log("AI Builder Ready");
+// ===================================
+// AI Builder - script.js Part 2
+// ===================================
+
+// Chat Animation
+function addAIMessage(message){
+
+  const msg = document.createElement("div");
+  msg.className = "ai-message";
+  msg.innerHTML = message;
+
+  chatBox.appendChild(msg);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Fake AI Response
+function generateAI(){
+
+  const prompt = promptInput.value.trim();
+
+  if(prompt===""){
+    alert("Enter your prompt.");
+    return;
+  }
+
+  addAIMessage("🤖 Thinking...");
+
+  setTimeout(()=>{
+
+    addAIMessage("✅ Project Generated Successfully.");
+
+    previewFrame.srcdoc=`
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+    <style>
+
+    body{
+
+    font-family:Arial;
+
+    background:#111827;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    }
+
+    h1{
+
+    color:#3b82f6;
+
+    }
+
+    </style>
+
+    </head>
+
+    <body>
+
+    <div>
+
+    <h1>AI Website Builder</h1>
+
+    <p>${prompt}</p>
+
+    </div>
+
+    </body>
+
+    </html>
+
+    `;
+
+  },2000);
+
+}
+
+if(generateBtn){
+  generateBtn.addEventListener("click",generateAI);
+}
+
+// Project Actions
+document.querySelectorAll(".project-list li").forEach(project=>{
+
+project.onclick=()=>{
+
+alert("Opening: "+project.innerText);
+
+};
+
+});
+
+// Dashboard Buttons
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.onclick=()=>{
+
+console.log(btn.innerText);
+
+};
+
+});
+
+// Loading Animation
+window.addEventListener("load",()=>{
+
+console.log("AI Builder Loaded");
+
+});
+
+// Future API Function
+async function callAI(prompt){
+
+// Groq API yahan connect hoga.
+
+console.log("Prompt:",prompt);
+
+}
