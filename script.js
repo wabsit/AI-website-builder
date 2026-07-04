@@ -328,3 +328,133 @@ async function callAI(prompt){
 console.log("Prompt:",prompt);
 
 }
+// =====================================
+// AI Builder - script.js Part 3
+// =====================================
+
+// Theme Toggle
+const themeBtn = document.getElementById("themeBtn");
+
+if (themeBtn) {
+
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            themeBtn.innerHTML = "🌙 Dark";
+        } else {
+            themeBtn.innerHTML = "☀ Light";
+        }
+
+    });
+
+}
+
+// Download Project
+
+function downloadProject() {
+
+    const html = document.documentElement.outerHTML;
+
+    const blob = new Blob([html], {
+        type: "text/html"
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+
+    a.href = url;
+
+    a.download = "AI-Website.html";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+}
+
+// Keyboard Shortcut
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.ctrlKey && e.key === "s") {
+
+        e.preventDefault();
+
+        saveProject();
+
+    }
+
+});
+
+// Auto Save
+
+setInterval(() => {
+
+    if (promptInput) {
+
+        localStorage.setItem(
+            "projectPrompt",
+            promptInput.value
+        );
+
+    }
+
+}, 5000);
+
+// Notification
+
+function notify(text) {
+
+    const box = document.createElement("div");
+
+    box.innerText = text;
+
+    box.style.position = "fixed";
+    box.style.right = "20px";
+    box.style.bottom = "20px";
+    box.style.background = "#2563eb";
+    box.style.color = "#fff";
+    box.style.padding = "12px 20px";
+    box.style.borderRadius = "10px";
+    box.style.zIndex = "9999";
+
+    document.body.appendChild(box);
+
+    setTimeout(() => {
+
+        box.remove();
+
+    }, 2500);
+
+}
+
+// Buttons
+
+document.querySelectorAll(".btn").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        notify(btn.innerText + " Clicked");
+
+    });
+
+});
+
+// Fake Deploy
+
+function deployProject() {
+
+    notify("🚀 Deploying Project...");
+
+    setTimeout(() => {
+
+        notify("✅ Deploy Complete");
+
+    }, 3000);
+
+}
+
+console.log("AI Builder Script Part 3 Loaded");
