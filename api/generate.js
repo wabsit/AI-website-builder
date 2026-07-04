@@ -1,11 +1,17 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({
+      error: "Method not allowed"
+    });
   }
 
-  try {
-    const { prompt } = req.body;
+  const { prompt } = req.body;
 
+  try {
     const response = await fetch(
       "https://api.groq.com/openai/v1/chat/completions",
       {
@@ -19,7 +25,7 @@ export default async function handler(req, res) {
           messages: [
             {
               role: "user",
-              content: `Create a complete HTML, CSS and JavaScript website for: ${prompt}`
+              content: prompt
             }
           ]
         })
@@ -27,6 +33,7 @@ export default async function handler(req, res) {
     );
 
     const data = await response.json();
+
     return res.status(200).json(data);
 
   } catch (error) {
